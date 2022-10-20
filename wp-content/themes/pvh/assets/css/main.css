@@ -1,0 +1,142 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-font {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #000000;
+}
+
+.submain-font {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+}
+
+.btn {
+    border-radius: 50px;
+}
+
+.gradient-1 {
+    background: linear-gradient(180deg, #54595F 0%, #303337 100%);
+}
+
+.gradient-3 {
+    background: linear-gradient(180deg, #54595F 0%, #303337 100%), #D9D9D9;
+}
+
+.container {
+    max-width: 1700px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.icon {
+    color: black;
+}
+
+.geo {
+    display: flex;
+}
+
+.geo__icon {
+    padding-right: 13px;
+    width: 17px;
+    height: 20px;
+}
+
+.geo__title, .geo__subtitle {
+    display: block;
+}
+
+.geo__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.geo__subtitle {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.whatsapp {
+    background: linear-gradient(0deg, #1FAF38 0%, #60D669 100%), #D9D9D9;
+    width: 238px;
+    height: 60px;
+    text-decoration: none;
+
+}
+
+.whatsapp,
+.callback-btn {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp__text,
+.callback-btn__text {
+    padding-top: 4px;
+}
+
+.whatsapp__icon,
+.callback-btn__icon {
+    padding-left: 24px;
+    width: 36px;
+    height: 36px;
+}
+
+.logo {
+    width: 118px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.callback-btn {
+    width: 238px;
+    height: 60px;
+    background: linear-gradient(180deg, #F3E286 0%, #E2A13E 100%);
+    border: none;
+}
+
+.callback-btn__icon {
+    display: block;
+}
+
+.contact-line {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact-line__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-line__item:hover {
+    cursor: pointer;
+}
+
+.contact-line__item:last-of-type {
+    margin: 0;
+}
+
+.contact-line__icon {
+    width: 25px;
+    height: 20px;
+    padding-right: 12px;
+}
