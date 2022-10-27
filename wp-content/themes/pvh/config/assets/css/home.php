@@ -1,4 +1,6 @@
 <?php
 return [
-    'home',
+    'home' => [
+        'media' => 'all',
+    ],
 ];

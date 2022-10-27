@@ -11,3 +11,54 @@
 .header__item {
     flex: 0 1 20%;
 }
+
+.header__menu {
+    height: 80px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.header__ul {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu li {
+    flex: 1 1 auto;
+    text-align: center;
+    height: 100%;
+    list-style-type: none;
+    background: linear-gradient(180deg, #54595F 0%, #303337 100%);
+    white-space: nowrap;
+}
+
+.header__menu li:first-of-type {
+    border-radius: 50px 0 0 50px;
+    padding-left: 50px;
+}
+
+.header__menu li:last-of-type {
+    border-radius: 0 50px 50px 0;
+    padding-right: 50px;
+}
+
+
+.header__menu li a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc(3px + 17 * (100vw / 1920));
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.header__burger {
+    display: none;
+}

@@ -59,7 +59,7 @@
             </div>
             <div class="header__item">
                 <div class="contact-line">
-                    <a class="contact-line__item">
+                    <a href="" class="contact-line__item">
                         <div class="contact-line__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mail_icon.svg"
                                  alt="mail icon">
@@ -68,7 +68,7 @@
                             zavesa@zavesa-online.ru
                         </span>
                     </a>
-                    <a class="contact-line__item">
+                    <a href="" class="contact-line__item">
                         <div class="contact-line__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone_icon.svg"
                                  alt="phone icon">
@@ -81,10 +81,32 @@
                 </div>
             </div>
         </div>
-        <nav class="header__menu">
-            <ul class="header__ul">
-                <li class="header__li"></li>
-            </ul>
-        </nav>
+        <div class="header__burger">
+            <div class="burger">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </div>
+        </div>
+        <?php
+        wp_nav_menu([
+            'theme_location' => '',
+            'menu' => 'menu_header',
+            'container' => 'nav',
+            'container_class' => 'header__menu',
+            'container_id' => '',
+            'menu_class' => '',
+            'menu_id' => '',
+            'echo' => true,
+            'fallback_cb' => 'wp_page_menu',
+            'before' => '',
+            'after' => '',
+            'link_before' => '',
+            'link_after' => '',
+            'items_wrap' => '<ul id="%1$s" class="header__ul">%3$s</ul>',
+            'depth' => 0,
+            'walker' => '',
+        ]);
+        ?>
     </header>
     <section class="content">

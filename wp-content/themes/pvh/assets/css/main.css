@@ -1,7 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 img {
     width: 100%;
     height: 100%;
+    display: block;
 }
+
 
 .main-font {
     font-family: 'Gilroy', sans-serif;
@@ -19,6 +25,17 @@ img {
 
 .btn {
     border-radius: 50px;
+}
+
+.main-btn {
+    background: linear-gradient(180deg, #F3E286 0%, #E2A13E 100%);
+    border-radius: 50px;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.25);
+    border: none;
 }
 
 .gradient-1 {
@@ -56,13 +73,14 @@ img {
 .geo__title {
     font-size: 18px;
     font-weight: 600;
-    line-height: 22px;
+    white-space: nowrap;
 }
 
 .geo__subtitle {
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
+    white-space: nowrap;
 }
 
 .whatsapp {
@@ -84,6 +102,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
+
 }
 
 .whatsapp__text,
@@ -125,6 +145,7 @@ img {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    white-space: nowrap;
 }
 
 .contact-line__item:hover {
@@ -139,4 +160,88 @@ img {
     width: 25px;
     height: 20px;
     padding-right: 12px;
+
+}
+
+.contact-line__text {
+    font-size: 18px;
+}
+
+.parallelogram {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transform: skew(10deg);
+}
+
+.parallelogram img {
+    transform: skew(-10deg);
+    position: absolute;
+    top: 0;
+    /* width: 117%;*/
+    /* right: 9%;*/
+}
+
+.parallelogram-reverse {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transform: skew(-10deg);
+    left: -9%;
+}
+
+.parallelogram-reverse img {
+    transform: skew(10deg);
+    position: absolute;
+    top: 0;
+    width: 117%;
+    left: 9%;
+}
+
+/* quiz-status-bar */
+.quiz-status-bar {
+    height: 10px;
+    border-radius: 50px;
+    background: rgba(84, 89, 95, 0.1);
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.quiz-status-bar__toddler {
+    border-radius: 100%;
+    padding: 2px;
+    border: 1px solid rgba(84, 89, 95, 0.5);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    left: 20%;
+    background: white;
+}
+
+.quiz-status-bar__toddler:hover {
+    cursor: pointer;
+}
+
+.quiz-status-bar__circle {
+    border-radius: 100%;
+    background: linear-gradient(180deg, #F3E286 0%, #E2A13E 100%);
+    width: 15px;
+    height: 15px;
+
+}
+
+.quiz-status-bar__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 21%;
+    background: linear-gradient(180deg, #F3E286 0%, #E2A13E 100%);
+    border-radius: 50px 0 0 50px;
+
 }

@@ -1,0 +1,56 @@
+.header {
+    padding-top: 20px;
+}
+
+.header__item:nth-of-type(1) {
+    order: 1;
+
+}
+
+.header__item:nth-of-type(3) {
+    order: 3;
+    flex: 0 1 100%;
+}
+
+.header__item:nth-of-type(5) {
+    order: 2;
+    flex: 0 1 50%;
+}
+
+.header__menu {
+    display: none;
+}
+
+.header__burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.burger {
+    width: 25px;
+    height: 20px;
+    position: relative;
+
+}
+
+.burger__line {
+    width: 100%;
+    display: block;
+    border-top: 2px solid black;
+    position: absolute;
+}
+
+.burger__line:nth-of-type(1) {
+    top: 0;
+}
+
+.burger__line:nth-of-type(2) {
+    top: 50%;
+    margin-top: -1px;
+}
+
+.burger__line:nth-of-type(3) {
+    bottom: 0;
+}
