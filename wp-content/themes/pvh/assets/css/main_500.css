@@ -1,34 +1,36 @@
-.whatsapp, .callback-btn {
-    width: 100%;
-    height: 50px;
-}
+@media (max-width: 551px) {
 
-.whatsapp {
-    margin-right: 5px;
-}
 
-.callback-btn {
-    margin-left: 5px;
-}
+    .whatsapp, .callback-btn {
+        width: 100%;
+        height: 50px;
+    }
 
-.whatsapp__icon, .callback-btn__icon {
-    width: 20px;
-    height: 20px;
-}
+    .whatsapp {
+        margin-right: 5px;
+    }
 
-.whatsapp__icon, .callback-btn__icon {
-    padding-left: 10px;
-}
+    .callback-btn {
+        margin-left: 5px;
+    }
 
-.contact-line__item {
-    margin-bottom: 5px;
-}
+    .whatsapp__icon, .callback-btn__icon {
+        margin-left: 10px;
+        width: 15px;
+        height: 15px;
+    }
 
-.contact-line__text,
-.geo__title {
-    font-size: 10px;
-}
+    .contact-line__item {
+        margin-bottom: 5px;
+    }
 
-.geo__subtitle {
-    font-size: 8px;
+    .contact-line__text,
+    .geo__title {
+        font-size: 10px;
+    }
+
+    .geo__subtitle {
+        font-size: 8px;
+    }
+
 }

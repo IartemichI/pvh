@@ -4,4 +4,8 @@ return [
         'deps' => '',
         'in_footer' => true,
     ],
+    'main' => [
+        'deps' => '',
+        'in_footer' => true,
+    ],
 ];

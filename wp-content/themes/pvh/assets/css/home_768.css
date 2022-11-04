@@ -1,0 +1,214 @@
+@media (max-width: 769px) {
+    .hero {
+        flex-wrap: wrap;
+        position: relative;
+        height: 400px;
+        padding-top: 0;
+        margin-top: 50px;
+    }
+
+    .hero__left,
+    .hero__right {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .hero__left {
+        z-index: 2;
+    }
+
+    .hero__right {
+        z-index: 1;
+    }
+
+    .hero__title {
+        padding-top: 20px;
+        font-size: calc(20px + (70 + 70 * 0.7) * ((100vw - 320px) / 1920));
+        text-align: center;
+        margin: 0 0 15px 0;
+        color: white;
+        position: relative;
+    }
+
+
+    .hero__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        left: 0;
+    }
+
+    .hero__overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: block;
+        z-index: 2;
+    }
+
+    .hero__image {
+        width: 90%;
+        left: 0;
+    }
+
+    .hero__parallelogram {
+        flex: 0 1 calc(50% - 20px);
+    }
+
+    .hero__parallelogram:nth-of-type(3n), .hero__parallelogram:nth-of-type(4n) {
+        left: 15px;
+    }
+
+    .hero__parallelogram {
+        margin-bottom: 20px;
+    }
+
+    .hero__parallelogram:nth-of-type(odd) {
+        margin-right: 15px;
+    }
+
+
+    .hero__service {
+        font-size: calc(12px + (12 + 12 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+
+    .hero__btn {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .product-grid__btn,
+    .hero__btn {
+        padding: 20px 0;
+    }
+
+    .product-grid__item {
+        flex: 1 1 auto;
+        margin: 0 0 30px 0;
+    }
+
+    .product-grid__title {
+        font-size: calc(22px + (18 + 18 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .product-grid__description {
+        font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .price__info {
+        height: auto;
+    }
+
+    .price__right {
+        justify-content: flex-start;
+    }
+
+    .price__item {
+        padding: 30px;
+    }
+
+    .price__title {
+        font-size: calc(40px + (30 + 30 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .price__name, .price__value {
+        font-size: calc(18px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .price__description {
+        font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1920));
+
+    }
+
+    .cost-calc__title {
+        font-size: calc(50px + (40 + 40 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .cost-calc {
+        display: none;
+    }
+
+    .main-quiz__question {
+        font-size: calc(20px + (20 + 20 * 0.7) * ((100vw - 320) / 1920));
+    }
+
+    .steps__title {
+        font-size: calc(40px + (30 + 30 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .steps__body {
+        padding-top: 50px;
+    }
+
+    .steps__item {
+        padding: 50px 50px 30px 50px;
+    }
+
+    .steps__body .steps__item {
+        flex: 1 1 auto;
+        margin: 0 0 50px 0;
+    }
+
+
+    .steps__item:nth-of-type(1), .steps__item:nth-of-type(2) {
+        margin-bottom: 50px;
+    }
+
+    .steps__icon {
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        top: -45px;
+        right: 30px;
+    }
+
+    .steps__name {
+        font-size: calc(20px + (20 + 20 * 0.7) * ((100vw - 320) / 1920));
+        padding: 10px 0;
+    }
+
+    .steps__subtitle {
+        font-size: calc(18px + (6 + 6 * 0.7) * ((100vw - 320) / 1920));
+
+    }
+
+    .portfolio__title {
+        font-size: calc(40px + (30 + 30 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .portfolio__gr-btn {
+        overflow: scroll;
+    }
+
+    .portfolio__btn {
+        font-size: calc(12px + (12 + 12 * 0.7) * ((100vw - 320px) / 1920));
+        padding: 15px 0;
+        margin-right: 9px;
+        flex: 0 1 calc(33% - 3px);
+        white-space: nowrap;
+    }
+
+    .map__wrapper {
+        position: relative;
+        left: -20px;
+    }
+
+    .contact-map {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .map {
+        margin-bottom: 0;
+    }
+
+
+}

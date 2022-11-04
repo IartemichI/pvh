@@ -20,22 +20,22 @@
 
 // ** Параметры базы данных: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define( 'DB_NAME', 'pvh.local' );
+define('DB_NAME', 'pvh.local');
 
 /** Имя пользователя базы данных */
-define( 'DB_USER', 'pvh.local' );
+define('DB_USER', 'pvh.local');
 
 /** Пароль к базе данных */
-define( 'DB_PASSWORD', 'pvh.local' );
+define('DB_PASSWORD', 'pvh.local');
 
 /** Имя сервера базы данных */
-define( 'DB_HOST', 'mariadb' );
+define('DB_HOST', 'mariadb');
 
 /** Кодировка базы данных для создания таблиц. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define('DB_CHARSET', 'utf8mb4');
 
 /** Схема сопоставления. Не меняйте, если не уверены. */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 /**#@+
  * Уникальные ключи и соли для аутентификации.
@@ -48,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'впишите сюда уникальную фразу' );
-define( 'SECURE_AUTH_KEY',  'впишите сюда уникальную фразу' );
-define( 'LOGGED_IN_KEY',    'впишите сюда уникальную фразу' );
-define( 'NONCE_KEY',        'впишите сюда уникальную фразу' );
-define( 'AUTH_SALT',        'впишите сюда уникальную фразу' );
-define( 'SECURE_AUTH_SALT', 'впишите сюда уникальную фразу' );
-define( 'LOGGED_IN_SALT',   'впишите сюда уникальную фразу' );
-define( 'NONCE_SALT',       'впишите сюда уникальную фразу' );
+define('AUTH_KEY', 'впишите сюда уникальную фразу');
+define('SECURE_AUTH_KEY', 'впишите сюда уникальную фразу');
+define('LOGGED_IN_KEY', 'впишите сюда уникальную фразу');
+define('NONCE_KEY', 'впишите сюда уникальную фразу');
+define('AUTH_SALT', 'впишите сюда уникальную фразу');
+define('SECURE_AUTH_SALT', 'впишите сюда уникальную фразу');
+define('LOGGED_IN_SALT', 'впишите сюда уникальную фразу');
+define('NONCE_SALT', 'впишите сюда уникальную фразу');
 
 /**#@-*/
 
@@ -78,17 +78,16 @@ $table_prefix = 'wp_';
  *
  * @link https://ru.wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define('WP_DEBUG', false);
 
 /* Произвольные значения добавляйте между этой строкой и надписью "дальше не редактируем". */
-
 
 
 /* Это всё, дальше не редактируем. Успехов! */
 
 /** Абсолютный путь к директории WordPress. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+if (!defined('ABSPATH')) {
+    define('ABSPATH', __DIR__ . '/');
 }
 
 /** Инициализирует переменные WordPress и подключает файлы. */

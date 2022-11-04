@@ -1,0 +1,22 @@
+@media (max-width: 501px) {
+
+
+    .portfolio__btn {
+        min-width: 170px;
+        margin-right: 9px;
+        flex: 1 1 auto;
+    }
+
+    .portfolio__slider-submain {
+        height: 100px;
+    }
+    .portfolio__pagination .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .portfolio__pagination .swiper-pagination-bullet-active {
+        width: 15px;
+        height: 15px;
+    }
+}

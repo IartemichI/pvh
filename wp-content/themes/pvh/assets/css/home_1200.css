@@ -1,0 +1,17 @@
+@media (max-width: 1201px) {
+    .steps__name {
+        padding-top: 10px;
+    }
+
+    .portfolio__slider-main {
+        height: 500px;
+    }
+
+    .portfolio__button-prev {
+        margin-left: -25px;
+    }
+
+    .portfolio__button-next {
+        margin-right: -25px;
+    }
+}

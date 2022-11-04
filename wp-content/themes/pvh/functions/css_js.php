@@ -1,13 +1,14 @@
 <?php
 
 
+add_action('wp_enqueue_scripts', 'enqueue_css');
+add_action('wp_enqueue_scripts', 'enqueue_js');
+
 if (!current_user_can('administrator') && !is_admin() && !is_login_page()) {
-    disable_emoji();
-    deregister_css();
-    deregister_js();
+    add_action('init', 'disable_emoji');
+    add_action('init', 'deregister_css');
+    add_action('init', 'deregister_js');
     add_action('init', 'remove_global_css');
-    add_action('wp_enqueue_scripts', 'enqueue_css');
-    add_action('wp_enqueue_scripts', 'enqueue_js');
 }
 
 function is_login_page(): bool

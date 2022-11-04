@@ -24,10 +24,16 @@ return [
     'main_1200' => [
         'media' => 'screen and (max-width: 1201px)'
     ],
+    'main_990' => [
+        'media' => 'screen and (max-width: 991px)'
+    ],
     'main_768' => [
         'media' => 'screen and (max-width: 769px)'
     ],
     'main_500' => [
         'media' => 'screen and (max-width: 501px)'
+    ],
+    'footer' => [
+        'media' => 'all',
     ],
 ];

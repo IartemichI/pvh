@@ -62,3 +62,7 @@
 .header__burger {
     display: none;
 }
+
+.menu-mobile {
+    display: none;
+}

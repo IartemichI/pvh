@@ -27,7 +27,7 @@
             <div class="header__item">
                 <a href="" class="btn whatsapp">
                     <span class="whatsapp__text">
-                        Whatsapp
+                        <?php echo carbon_get_theme_option('header_whatsapp_text') ?>
                     </span>
                     <div class="whatsapp__icon">
                         <img loading="lazy"
@@ -48,7 +48,7 @@
             <div class="header__item">
                 <button class="callback-btn btn">
                     <span class="callback-btn__text">
-                        Связаться
+                        <?php echo carbon_get_theme_option('header_callback_text') ?>
                     </span>
                     <span class="callback-btn__icon">
                         <img loading="lazy"
@@ -59,22 +59,22 @@
             </div>
             <div class="header__item">
                 <div class="contact-line">
-                    <a href="" class="contact-line__item">
+                    <a href="mailto:<?php echo carbon_get_theme_option('header_mail') ?>" class="contact-line__item">
                         <div class="contact-line__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mail_icon.svg"
                                  alt="mail icon">
                         </div>
                         <span class="contact-line__text main-font">
-                            zavesa@zavesa-online.ru
+                            <?php echo carbon_get_theme_option('header_mail') ?>
                         </span>
                     </a>
-                    <a href="" class="contact-line__item">
+                    <a href="tel:<?php echo carbon_get_theme_option('header_phone') ?>" class="contact-line__item">
                         <div class="contact-line__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone_icon.svg"
                                  alt="phone icon">
                         </div>
                         <span class="contact-line__text main-font">
-                            8 800 123 45 67
+                            <?php echo carbon_get_theme_option('header_phone') ?>
                         </span>
                     </a>
 
@@ -109,4 +109,34 @@
         ]);
         ?>
     </header>
-    <section class="content">
+</div>
+<div class="menu-mobile">
+    <div class="menu-mobile__cross">
+        <div id="__cross" class="menu-mobile__cross-body">
+            <div class="menu-mobile__line"></div>
+            <div class="menu-mobile__line"></div>
+        </div>
+    </div>
+    <?php
+    wp_nav_menu([
+        'theme_location' => '',
+        'menu' => 'menu_header',
+        'container' => 'nav',
+        'container_class' => 'menu-mobile__wrapper ',
+        'container_id' => '',
+        'menu_class' => '',
+        'menu_id' => '',
+        'echo' => true,
+        'fallback_cb' => 'wp_page_menu',
+        'before' => '',
+        'after' => '',
+        'link_before' => '',
+        'link_after' => '',
+        'items_wrap' => '<ul id="%1$s" class="menu-mobile__ul">%3$s</ul>',
+        'depth' => 0,
+        'walker' => '',
+    ]);
+    ?>
+
+</div>
+<section class="content container">

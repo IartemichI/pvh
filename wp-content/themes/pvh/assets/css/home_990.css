@@ -1,0 +1,90 @@
+@media (max-width: 991px) {
+    .home-item {
+        padding-top: 50px;
+    }
+
+    .hero__service {
+        padding-left: 5px;
+    }
+
+    .hero__circle {
+        width: 5px;
+        height: 5px;
+    }
+
+    .product-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-grid__item {
+        flex: 0 1 calc(50% - 15px);
+        margin: 0 30px 30px 0;
+    }
+
+    .product-grid__item:nth-of-type(even) {
+        margin-right: 0;
+    }
+
+    .product-grid__info {
+        padding: 20px 15px;
+    }
+
+    .price__left {
+        display: none;
+    }
+
+    .price__right {
+        flex: 1 1 auto;
+    }
+
+    .price__right .price__item {
+        left: 0;
+    }
+
+    .price__btn {
+        width: 100%;
+        left: 0;
+    }
+
+    .steps__icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -50px;
+        right: 30px;
+    }
+
+
+    .portfolio__btn {
+        padding: 15px 0;
+        margin-right: 15px;
+        flex: 0 1 calc(33% - 10px)
+    }
+
+
+    .portfolio__button-next, .portfolio__button-prev {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .portfolio__ellipse {
+        padding: 10px;
+    }
+
+    .portfolio__slider-submain {
+        height: 150px;
+    }
+
+    .portfolio__pagination .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+    }
+
+    .portfolio__pagination .swiper-pagination-bullet-active {
+        width: 20px;
+        height: 20px;
+    }
+
+}
