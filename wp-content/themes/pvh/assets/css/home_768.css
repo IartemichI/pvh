@@ -82,24 +82,13 @@
     .hero__btn {
         width: 100%;
         margin-top: 25px;
-    }
-
-    .product-grid__btn,
-    .hero__btn {
         padding: 20px 0;
+
     }
 
-    .product-grid__item {
+    .product-grid .product {
         flex: 1 1 auto;
         margin: 0 0 30px 0;
-    }
-
-    .product-grid__title {
-        font-size: calc(22px + (18 + 18 * 0.7) * ((100vw - 320px) / 1920));
-    }
-
-    .product-grid__description {
-        font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1920));
     }
 
     .price__info {
@@ -178,37 +167,5 @@
         font-size: calc(18px + (6 + 6 * 0.7) * ((100vw - 320) / 1920));
 
     }
-
-    .portfolio__title {
-        font-size: calc(40px + (30 + 30 * 0.7) * ((100vw - 320px) / 1920));
-    }
-
-    .portfolio__gr-btn {
-        overflow: scroll;
-    }
-
-    .portfolio__btn {
-        font-size: calc(12px + (12 + 12 * 0.7) * ((100vw - 320px) / 1920));
-        padding: 15px 0;
-        margin-right: 9px;
-        flex: 0 1 calc(33% - 3px);
-        white-space: nowrap;
-    }
-
-    .map__wrapper {
-        position: relative;
-        left: -20px;
-    }
-
-    .contact-map {
-        position: static;
-        transform: none;
-        margin: 0 auto;
-    }
-
-    .map {
-        margin-bottom: 0;
-    }
-
 
 }

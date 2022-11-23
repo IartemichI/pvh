@@ -41,23 +41,23 @@ Template Post Type: page
 $products_grid = carbon_get_post_meta(get_the_ID(), 'home_product_grid');
 if (isset($products_grid)) {
     ?>
-    <section class="home-item product-grid">
+    <section id="home-production" class="home-item product-grid">
         <?php
         foreach ($products_grid as $product) {
             ?>
-            <article class="product-grid__item">
-                <div class="product-grid__image">
+            <article class="product">
+                <div class="product__image">
                     <img src="<?php echo $product['image']; ?>"
                          alt="product grid">
                 </div>
-                <div class="product-grid__info">
-                    <h2 class="product-grid__title main-font"><?php echo $product['title']; ?></h2>
-                    <div class="product-grid__description submain-font">
-                        <div class="product-grid__text"><?php echo $product['description'] ?></div>
+                <div class="product__info">
+                    <h3 class="product__title main-font"><?php echo $product['title']; ?></h3>
+                    <div class="product__description submain-font">
+                        <div class="product__text"><?php echo $product['description'] ?></div>
                         <a href="<?php echo $product['link'] ?>"
-                           class="product-grid__more"><?php echo $product['link_text'] ?> &rarr;</a>
+                           class="product__more"><?php echo $product['link_text'] ?> &rarr;</a>
                     </div>
-                    <button class="product-grid__btn main-font main-btn"><?php echo $product['btn_text'] ?></button>
+                    <button class="product__btn main-font main-btn"><?php echo $product['btn_text'] ?></button>
                 </div>
             </article>
 
@@ -70,7 +70,7 @@ if (isset($products_grid)) {
 $price_items = carbon_get_post_meta(get_the_ID(), 'home_price_values');
 if (isset($price_items)) {
     ?>
-    <section class="home-item price">
+    <section id="home-price" class="home-item price">
         <h2 class="price__title main-font"><?php echo carbon_get_post_meta(get_the_ID(), 'home_price_title'); ?></h2>
         <div class="price__info">
             <div class="price__left">
@@ -101,70 +101,15 @@ if (isset($price_items)) {
 
     </section>
 <?php } ?>
-<section class="cost-calc home-item">
-    <h2 class="cost-calc__title main-font">Расчет стоимости</h2>
-    <div class="cost-calc__quiz">
-        <div class="main-quiz">
-            <div class="main-quiz__left">
-                <div class="main-quiz__item">
-                    <div class="main-quiz__info">
-                        <div class="main-quiz__image">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/temp_images/quiz.png'; ?>"
-                                 alt="">
-                        </div>
-                        <div class="main-quiz__overlay"></div>
-                        <div class="main-quiz__title main-font">ПВХ завесы</div>
-                    </div>
-                    <div class="main-quiz__checkbox">
-                        <div class="main-quiz__circle"></div>
-                    </div>
-                </div>
-                <div class="main-quiz__item">
-                    <div class="main-quiz__info">
-                        <div class="main-quiz__image">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/temp_images/quiz.png'; ?>"
-                                 alt="">
-                        </div>
-                        <div class="main-quiz__overlay"></div>
-                        <div class="main-quiz__title main-font">ПВХ завесы</div>
-                    </div>
-                    <div class="main-quiz__checkbox">
-                        <div class="main-quiz__circle"></div>
-                    </div>
-                </div>
-                <div class="main-quiz__item">
-                    <div class="main-quiz__info">
-                        <div class="main-quiz__image">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/temp_images/quiz.png'; ?>"
-                                 alt="">
-                        </div>
-                        <div class="main-quiz__overlay"></div>
-                        <div class="main-quiz__title main-font">ПВХ завесы</div>
-                    </div>
-                    <div class="main-quiz__checkbox">
-                        <div class="main-quiz__circle"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-quiz__right">
-                <div class="quiz-status-bar">
-                    <div class="quiz-status-bar__line"></div>
-                    <div class="quiz-status-bar__toddler">
-                        <div class="quiz-status-bar__circle"></div>
-                    </div>
-                    <div class="quiz-status__line"></div>
-                </div>
-                <h2 class="main-quiz__question main-font">Что считаем?</h2>
-                <button class="main-btn btn main-font main-quiz__btn">далее</button>
-            </div>
-        </div>
-    </div>
+<section class="home-item">
+    <?php echo do_shortcode('[contact-form-7 id="252" title="Опрос"]'); ?>
+    <?php // echo get_template_part('non-active-template-parts/quiz'); ?>
 </section>
 <?php
 $steps = carbon_get_post_meta(get_the_ID(), 'home_steps');
 if (isset($steps)) {
     ?>
-    <section class="steps home-item">
+    <section id="home-steps" class="steps home-item">
         <h2 class="steps__title main-font"><?php echo carbon_get_post_meta(get_the_ID(), 'home_steps_title') ?></h2>
         <section class="steps__body">
             <?php foreach ($steps as $step) {
@@ -176,7 +121,7 @@ if (isset($steps)) {
                                     src="<?php echo $step['image'] ?>"
                                     alt="step 1"></div>
                     </div>
-                    <div class="steps__name main-font"><?php echo $step['title'] ?>></div>
+                    <div class="steps__name main-font"><?php echo $step['title'] ?></div>
                     <div class="steps__subtitle  submain-font"><?php echo $step['subtitle'] ?></div>
                 </article>
                 <?php
@@ -187,136 +132,18 @@ if (isset($steps)) {
 }
 ?>
 
-<section class="home-item portfolio">
-    <h2 class="portfolio__title main-font">
-        <?php echo carbon_get_post_meta(get_the_ID(), 'home_slider_portfolio_title'); ?>
-    </h2>
-    <div class="portfolio__gr-btn">
-        <button class="portfolio__btn btn main-font submain-btn">ПВХ завесы</button>
-        <button class="portfolio__btn btn main-font submain-btn">ПВХ Шторы</button>
-        <button class="portfolio__btn btn main-font submain-btn">Маятниковые двери</button>
-    </div>
-    <div class="portfolio__body">
-
-        <div class="portfolio__slider-main">
-            <?php
-            $sliders_pvh = carbon_get_post_meta(get_the_ID(), 'home_slider_portfolio_pvh'); ?>
-            <div class="portfolio__wrapper swiper-wrapper">
-                <?php
-                foreach ($sliders_pvh as $slider) { ?>
-                    <div class="portfolio__slide swiper-slide ">
-                        <img src="<?php echo $slider['image']; ?>"
-                             alt="slider pvh">
-                    </div>
-                <?php } ?>
-            </div>
-
-        </div>
-        <div class="portfolio__button-prev">
-            <div class="portfolio__ellipse">
-                <div class="portfolio__arrow">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/portfolio_arrow.png'; ?>"
-                         alt="arrow slider">
-                </div>
-            </div>
-        </div>
-        <div class="portfolio__button-next">
-            <div class="portfolio__ellipse">
-                <div class="portfolio__arrow">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/portfolio_arrow.png'; ?>"
-                         alt="arrow slider">
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="portfolio__slider-submain">
-        <div class="portfolio__wrapper swiper-wrapper">
-            <?php foreach ($sliders_pvh as $slider) { ?>
-                <div class="portfolio__slide swiper-slide">
-                    <img src="<?php echo $slider['image'] ?>"
-                         alt="">
-                </div>
-            <?php } ?>
-        </div>
-    </div>
-    <div class="portfolio__pagination">
-    </div>
+<div id="home-slider" class="home-item">
+    <?php the_slider(); ?>
+</div>
 
 
-    <section class="home-item home-description submain-font">
-        <?php echo carbon_get_post_meta(get_the_ID(), 'home_description') ?>
-    </section>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper(".portfolio__slider-submain", {
-            loop: true,
-            spaceBetween: 30,
-            slidesPerView: 3,
-            freeMode: true,
-            watchSlidesProgress: true,
-        });
-        const swiper2 = new Swiper(".portfolio__slider-main", {
-            loop: true,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".portfolio__button-next",
-                prevEl: ".portfolio__button-prev",
-            },
-            thumbs: {
-                swiper: swiper,
-            },
-            pagination: {
-                el: ".portfolio__pagination",
-            },
-        });
-    </script>
+<section id="home-desc" class="home-item home-description submain-font">
+    <?php echo carbon_get_post_meta(get_the_ID(), 'home_description') ?>
 </section>
-<section class="map home-item">
-    <div class="map__wrapper">
-        <div class="contact-map">
-            <div class="contact-map__title main-font">
-                <?php echo carbon_get_post_meta(get_the_ID(), 'home_map_contact_title') ?></div>
-            <div class="contact-map__line">
-            </div>
-            <article class="contact-map__item">
-                <div class="contact-map__icon">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/contact_phone.png' ?>"
-                         alt="phone icon">
-                </div>
-                <a href="tel:<?php echo str_replace(" ", "", carbon_get_post_meta(get_the_ID(), 'home_map_contact_phone')); ?>"
-                   class="contact-map__value main-font"><?php echo carbon_get_post_meta(get_the_ID(), 'home_map_contact_phone') ?></a>
-            </article>
-            <article class="contact-map__item">
-                <div class="contact-map__icon">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/contact_mail.png' ?>"
-                         alt="phone icon">
-                </div>
-                <a href="mailto:<?php echo str_replace(" ", "", carbon_get_post_meta(get_the_ID(), 'home_map_contact_mail')); ?>"
-                   class="contact-map__value main-font"><?php echo carbon_get_post_meta(get_the_ID(), 'home_map_contact_mail'); ?></a>
-            </article>
-            <article class="contact-map__item">
-                <div class="contact-map__icon">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/contact_ballun.png' ?>"
-                         alt="phone icon">
-                </div>
-                <div class="contact-map__gr-value">
-                    <a href=""
-                       class="contact-map__value main-font"><?php echo carbon_get_post_meta(get_the_ID(), 'home_map_contact_city') ?>
-                    </a>
-                    <a href=""
-                       class="contact-map__subvalue main-font"><?php echo carbon_get_post_meta(get_the_ID(), 'home_map_contact_address') ?></a>
-                </div>
-            </article>
-        </div>
-        <div class="map__body">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab32f1aea52841f3d4a179bec0a815e9c5f3c65e4e1d47550f1e6b99902b3b358&amp;source=constructor"
-                    width="532" height="600" frameborder="0"></iframe>
-        </div>
-    </div>
-</section>
+
+<div id="home-contact" class="home-item">
+    <?php the_map(); ?>
+</div>
 <script>
 
 </script>

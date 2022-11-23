@@ -1,0 +1,50 @@
+.advantage-product {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advantage-product__item {
+    flex: 0 1 calc(50% - 38px);
+    margin: 0 75px 30px 0;
+    background: #FFFFFF;
+    border: 1px solid rgba(238, 204, 85, 0.5);
+    box-shadow: 0px 0px 36px rgba(96, 97, 112, 0.2);
+    border-radius: 20px;
+    height: 300px;
+    padding: 30px;
+    position: relative;
+}
+
+.advantage-product__item:nth-of-type(2n) {
+    margin-right: 0;
+}
+
+.advantage-product__info {
+    width: 60%;
+}
+
+.advantage-product__title {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.advantage-product__desc {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.advantage-product__image {
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    right: -4%;
+    top: 0;
+    left: auto;
+}
+
+.advantage-product__image.parallelogram-reverse img {
+    width: 125%;
+    left: -11%;
+}

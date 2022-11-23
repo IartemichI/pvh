@@ -64,42 +64,12 @@ function hero_screen(): void
                     Field::make('image', 'image', 'Иконка')->set_value_type('url'),
                 )),
         ));
-    Container::make('post_meta', __('Примеры работа слайдер'))
-        ->where('post_template', '=', 'front-page.php')
-        ->add_fields(array(
-            Field::make('text', 'home_slider_portfolio_title', __('Заголовок')),
-        ))
-        ->add_tab(__('ПВХ завесы'), array(
-            Field::make('complex', 'home_slider_portfolio_pvh', __('Изображения'))
-                ->add_fields(array(
-                    Field::make('image', 'image', 'Изображение')->set_value_type('url'),
-                )),
-        ))
-        ->add_tab(__('ПВХ Шторы'), array(
-            Field::make('complex', 'home_slider_portfolio_curtains', __('Изображения'))
-                ->add_fields(array(
-                    Field::make('image', 'image', 'Изображение')->set_value_type('url'),
-                )),
-        ))
-        ->add_tab(__('Маятниковые двери'), array(
-            Field::make('complex', 'home_slider_portfolio_door', __('Изображения'))
-                ->add_fields(array(
-                    Field::make('image', 'image', 'Изображение')->set_value_type('url'),
-                )),
-        ));
+
     Container::make('post_meta', __('Описание'))
         ->where('post_template', '=', 'front-page.php')
         ->add_fields(array(
                 Field::make('rich_text', 'home_description', __('Описание'))
             )
         );
-    Container::make('post_meta', __('Карта'))
-        ->where('post_template', '=', 'front-page.php')
-        ->add_fields(array(
-            Field::make('text', 'home_map_contact_title', __('Заголовок контактов')),
-            Field::make('text', 'home_map_contact_phone', __('Номер телефона')),
-            Field::make('text', 'home_map_contact_mail', __('Почта')),
-            Field::make('text', 'home_map_contact_city', __('Город')),
-            Field::make('text', 'home_map_contact_address', __('Улица')),
-        ));
+
 }

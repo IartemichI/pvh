@@ -10,12 +10,7 @@ return [
         'media' => 'screen and (max-width: 991px)'
 
     ],
-
     'home_768' => [
         'media' => 'screen and (max-width: 769px)'
     ],
-    'home_500' => [
-        'media' => 'screen  and (max-width:501px)'
-    ],
-
 ];

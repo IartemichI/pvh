@@ -1,5 +1,22 @@
 @media (max-width: 991px) {
+    .item-block {
+        padding-top: 50px;
+    }
+
     .hero__btn {
         padding: 25px 0;
     }
+
+    .product {
+        margin: 0 30px 30px 0;
+    }
+
+    .product:nth-of-type(even) {
+        margin-right: 0;
+    }
+
+    .product__info {
+        padding: 20px 15px;
+    }
+
 }

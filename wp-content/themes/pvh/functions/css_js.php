@@ -102,18 +102,24 @@ function enqueue_css(): void
     $page = get_page_name();
     $styles = [];
     $styles['global_styles'] = require_once get_template_directory() . '/config/assets/css/global.php';
-    $styles['page_styles'] = require_once get_template_directory() . '/config/assets/css/' . $page . '.php';
+
 
     foreach ($styles['global_styles'] as $style => $data) {
         if (file_exists(get_template_directory() . '/assets/css/' . $style . '.css')) {
             wp_enqueue_style($style, get_template_directory_uri() . '/assets/css/' . $style . '.css', '', '', $data['media']);
         }
     }
-    foreach ($styles['page_styles'] as $style => $data) {
-        if (file_exists(get_template_directory() . '/assets/css/' . $style . '.css')) {
-            wp_enqueue_style($style, get_template_directory_uri() . '/assets/css/' . $style . '.css', '', '', $data['media']);
+
+    $page_file = get_template_directory() . '/config/assets/css/' . $page . '.php';
+    if (file_exists($page_file)) {
+        $styles['page_styles'] = require_once $page_file;
+        foreach ($styles['page_styles'] as $style => $data) {
+            if (file_exists(get_template_directory() . '/assets/css/' . $style . '.css')) {
+                wp_enqueue_style($style, get_template_directory_uri() . '/assets/css/' . $style . '.css', '', '', $data['media']);
+            }
         }
     }
+
     //TODO: if will added fonts
     wp_enqueue_style('gilroy', get_template_directory_uri() . '/assets/fonts/gilroy/gilroy.css');
     wp_enqueue_style('gilroy', get_template_directory_uri() . '/assets/fonts/montserrat/montserrat.css');
@@ -124,10 +130,23 @@ function enqueue_css(): void
 function enqueue_js(): void
 {
     $page = get_page_name();
-    $js['page_js'] = require_once get_template_directory() . '/config/assets/js/' . $page . '.php';
-    foreach ($js['page_js'] as $name => $data) {
+    $page_file = get_template_directory() . '/config/assets/js/' . $page . '.php';
+
+    $js['global_styles'] = require_once get_template_directory() . '/config/assets/js/global.php';
+
+
+    foreach ($js['global_styles'] as $name => $data) {
         if (file_exists(get_template_directory() . '/assets/js/' . $name . '.js')) {
             wp_enqueue_script($name, get_template_directory_uri() . '/assets/js/' . $name . '.js', $data['deps'], '', $data['in_footer']);
+        }
+    }
+
+    if (file_exists($page_file)) {
+        $js['page_js'] = require_once $page_file;
+        foreach ($js['page_js'] as $name => $data) {
+            if (file_exists(get_template_directory() . '/assets/js/' . $name . '.js')) {
+                wp_enqueue_script($name, get_template_directory_uri() . '/assets/js/' . $name . '.js', $data['deps'], '', $data['in_footer']);
+            }
         }
     }
 }
@@ -137,6 +156,12 @@ function get_page_name(): string
 {
     if (is_front_page()) {
         return 'home';
+    }
+    if (is_page_template('templates/single_service.php')) {
+        return 'single_service';
+    }
+    if (is_page_template('templates/about_product.php')) {
+        return 'about_product';
     }
     return '404';
 }
